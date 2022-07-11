@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link href= "{% static 'webapp/css/style.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+<h1>Insert Nation_ID</h1>
+<form method="post" action="{% url 'verification' %}">
+    {% csrf_token %}
+    Nation_ID : <input type="integer" name="id"><br/>
+    <input type="submit" value="verify">
+</form>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+
+    </head>
+<form method="post" action="{% url 'addperson' %}">
+            {% csrf_token %}
+            
+            <input type="submit" value="new person">
+</form>
+<form method="post" action="{% url 'showdata' %}">
+    {% csrf_token %}
+    
+    <input type="submit" value="Show Data">
+</form>
+dashboard
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show data</title>
+
+    </head>
+<table border="2px">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Na_ID</th>
+    <th>Country</th>
+    <th>Address</th>
+    <th>Phone_Num</th>
+</tr>
+{%for o in d %}
+<tr>
+    <td>{{o.id}}</td>
+    <td>{{o.name}}</td>
+    <td>{{o.age}}</td>
+    <td>{{o.Na_id}}</td>
+    <td>{{o.country}}</td>
+    <td>{{o.address}}</td>
+    <td>{{o.phone_num}}</td>
+
+</tr>
+{%endfor%}
+</table>
+To add another<a href=" {% url 'addperson' %} ">click here</a>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add person</title>
+</head>
+<body>
+<h1>Add new person</h1>
+<form method="post" action="{%url 'add'%}">
+    {% csrf_token %}
+    Name:<input type="text" name="name" ><br/>
+    Age:<input type="number" name="age" ><br/>
+    Nation_ID:<input type="number" name="id" ><br/>
+    Country:<input type="text" name="country" ><br/>
+    Adress:<input type="text" name="address" ><br/>
+    Phone_Num:<input type="text" name="phone_num" ><br/>
+    <input type="submit" value="ADD">
+</form>
+</body>
+</html>
+{% endblock content %}
